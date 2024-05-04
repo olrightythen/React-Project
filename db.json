@@ -1,0 +1,519 @@
+{
+  "foods": [
+    {
+      "id": "1",
+      "name": "Classic Margherita Pizza",
+      "tags": [
+        "Pizza",
+        "Italian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+      "rating": 4.6,
+      "reviewCount": 3,
+      "price": 10.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Vegetarian Stir-Fry",
+      "tags": [
+        "Vegetarian",
+        "Stir-fry",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
+      "rating": 4.7,
+      "reviewCount": 36,
+      "price": 8.99,
+      "mealType": [
+        "Lunch"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Chocolate Chip Cookies",
+      "tags": [
+        "Cookies",
+        "Dessert",
+        "Baking"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/3.webp",
+      "rating": 4.9,
+      "reviewCount": 23,
+      "price": 5.99,
+      "mealType": [
+        "Snack",
+        "Dessert"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Chicken Alfredo Pasta",
+      "tags": [
+        "Pasta",
+        "Chicken"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/4.webp",
+      "rating": 4.9,
+      "reviewCount": 38,
+      "price": 12.99,
+      "mealType": [
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Mango Salsa Chicken",
+      "tags": [
+        "Chicken",
+        "Salsa"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/5.webp",
+      "rating": 4.9,
+      "reviewCount": 25,
+      "price": 14.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Quinoa Salad with Avocado",
+      "tags": [
+        "Salad",
+        "Quinoa"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/6.webp",
+      "rating": 4.4,
+      "reviewCount": 21,
+      "price": 9.99,
+      "mealType": [
+        "Lunch",
+        "Side Dish"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Tomato Basil Bruschetta",
+      "tags": [
+        "Bruschetta",
+        "Italian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/7.webp",
+      "rating": 4.7,
+      "reviewCount": 9,
+      "price": 6.99,
+      "mealType": [
+        "Appetizer"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Beef and Broccoli Stir-Fry",
+      "tags": [
+        "Beef",
+        "Stir-fry",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/8.webp",
+      "rating": 4.7,
+      "reviewCount": 18,
+      "price": 11.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Caprese Salad",
+      "tags": [
+        "Salad",
+        "Caprese"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/9.webp",
+      "rating": 4.6,
+      "reviewCount": 26,
+      "price": 7.99,
+      "mealType": [
+        "Lunch"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Shrimp Scampi Pasta",
+      "tags": [
+        "Pasta",
+        "Shrimp"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/10.webp",
+      "rating": 4.3,
+      "reviewCount": 15,
+      "price": 13.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Chicken Biryani",
+      "tags": [
+        "Biryani",
+        "Chicken",
+        "Main course",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/11.webp",
+      "rating": 5,
+      "reviewCount": 34,
+      "price": 15.99,
+      "mealType": [
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Chicken Karahi",
+      "tags": [
+        "Chicken",
+        "Karahi",
+        "Main course",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/12.webp",
+      "rating": 4.8,
+      "reviewCount": 6,
+      "price": 14.99,
+      "mealType": [
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Aloo Keema",
+      "tags": [
+        "Keema",
+        "Potatoes",
+        "Main course",
+        "Pakistani",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/13.webp",
+      "rating": 4.6,
+      "reviewCount": 30,
+      "price": 12.99,
+      "mealType": [
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Chapli Kebabs",
+      "tags": [
+        "Kebabs",
+        "Beef",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/14.webp",
+      "rating": 4.7,
+      "reviewCount": 22,
+      "price": 13.99,
+      "mealType": [
+        "Lunch",
+        "Dinner",
+        "Snacks"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Saag (Spinach) with Makki di Roti",
+      "tags": [
+        "Saag",
+        "Roti",
+        "Main course",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/15.webp",
+      "rating": 4.3,
+      "reviewCount": 36,
+      "price": 11.99,
+      "mealType": [
+        "Breakfast",
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Japanese Ramen Soup",
+      "tags": [
+        "Ramen",
+        "Japanese",
+        "Soup",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/16.webp",
+      "rating": 4.9,
+      "reviewCount": 46,
+      "price": 10.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Moroccan Chickpea Tagine",
+      "tags": [
+        "Tagine",
+        "Chickpea",
+        "Moroccan"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/17.webp",
+      "rating": 4.5,
+      "reviewCount": 34,
+      "price": 12.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Korean Bibimbap",
+      "tags": [
+        "Bibimbap",
+        "Korean",
+        "Rice"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/18.webp",
+      "rating": 4.9,
+      "reviewCount": 10,
+      "price": 13.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Greek Moussaka",
+      "tags": [
+        "Moussaka",
+        "Greek"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/19.webp",
+      "rating": 4.3,
+      "reviewCount": 5,
+      "price": 14.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "20",
+      "name": "Butter Chicken (Murgh Makhani)",
+      "tags": [
+        "Butter chicken",
+        "Curry",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/20.webp",
+      "rating": 4.5,
+      "reviewCount": 18,
+      "price": 15.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "21",
+      "name": "Thai Green Curry",
+      "tags": [
+        "Curry",
+        "Thai"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/21.webp",
+      "rating": 4.2,
+      "reviewCount": 30,
+      "price": 12.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "22",
+      "name": "Mango Lassi",
+      "tags": [
+        "Lassi",
+        "Mango",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/22.webp",
+      "rating": 4.7,
+      "reviewCount": 6,
+      "price": 4.99,
+      "mealType": [
+        "Beverage"
+      ]
+    },
+    {
+      "id": "23",
+      "name": "Italian Tiramisu",
+      "tags": [
+        "Tiramisu",
+        "Italian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/23.webp",
+      "rating": 4.6,
+      "reviewCount": 6,
+      "price": 6.99,
+      "mealType": [
+        "Dessert"
+      ]
+    },
+    {
+      "id": "24",
+      "name": "Turkish Kebabs",
+      "tags": [
+        "Kebabs",
+        "Turkish",
+        "Grilling"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/24.webp",
+      "rating": 4.6,
+      "reviewCount": 19,
+      "price": 13.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "25",
+      "name": "Blueberry Banana Smoothie",
+
+      "tags": [
+        "Smoothie",
+        "Blueberry",
+        "Banana"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/25.webp",
+      "rating": 4.8,
+      "reviewCount": 6,
+      "price": 5.99,
+      "mealType": [
+        "Breakfast",
+        "Beverage"
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Mexican Street Corn (Elote)",
+      "tags": [
+        "Elote",
+        "Mexican",
+        "Street food"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/26.webp",
+      "rating": 4.6,
+      "reviewCount": 22,
+      "price": 7.99,
+      "mealType": [
+        "Snack",
+        "Side Dish"
+      ]
+    },
+    {
+      "id": "27",
+      "name": "Russian Borscht",
+      "tags": [
+        "Borscht",
+        "Russian",
+        "Soup"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/27.webp",
+      "rating": 4.3,
+      "reviewCount": 49,
+      "price": 8.99,
+      "mealType": [
+        "Dinner"
+      ]
+    },
+    {
+      "id": "28",
+      "name": "South Indian Masala Dosa",
+      "tags": [
+        "Dosa",
+        "Indian",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/28.webp",
+      "rating": 4.4,
+      "reviewCount": 6,
+      "price": 9.99,
+      "mealType": [
+        "Breakfast"
+      ]
+    },
+    {
+      "id": "29",
+      "name": "Lebanese Falafel Wrap",
+      "tags": [
+        "Falafel",
+        "Lebanese",
+        "Wrap"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/29.webp",
+      "rating": 4.7,
+      "reviewCount": 25,
+      "price": 8.99,
+      "mealType": [
+        "Lunch"
+      ]
+    },
+    {
+      "id": "30",
+      "name": "Brazilian Caipirinha",
+      "tags": [
+        "Caipirinha",
+        "Brazilian",
+        "Cocktail"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/30.webp",
+      "rating": 4.4,
+      "reviewCount": 4,
+      "price": 7.99,
+      "mealType": [
+        "Beverage"
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "exampl.com",
+      "password": "password",
+      "phone": "123-456-7890",
+      "address": "123 Main St, City, State, 12345",
+      "orders": []
+    }
+  ],
+  "total": 50,
+  "skip": 0,
+  "limit": 30
+}
