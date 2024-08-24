@@ -3,13 +3,20 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { NavLink } from "react-router-dom"; // Import NavLink from React Router
 import { FaUserCircle } from "react-icons/fa";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
+import icon from "../assets/logo.jpg";
 
 const navigation = [
-  { name: "Dashboard", href: "/admin/dashboard"},
-  { name: "Foods", href: "/admin/foods"},
-  { name: "Orders", href: "/admin/orders"},
-  { name: "Users", href: "/admin/users"},
+  { name: "Dashboard", href: "/admin/dashboard" },
+  { name: "Foods", href: "/admin/foods" },
+  { name: "Orders", href: "/admin/orders" },
+  { name: "Users", href: "/admin/users" },
 ];
+
+const handleLogout = () => {
+  localStorage.removeItem("token");
+  localStorage.removeItem("rememberMe");
+  window.location.href = "/admin/login";
+};
 
 export default function AdminNav() {
   return (
@@ -27,15 +34,14 @@ export default function AdminNav() {
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
                     <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                    
                   )}
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    className="h-8 w-auto rounded-lg"
+                    src={icon}
                     alt="Your Company"
                   />
                 </div>
@@ -49,7 +55,7 @@ export default function AdminNav() {
                           e.isActive
                             ? "bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-                        }  
+                        }
                       >
                         {item.name}
                       </NavLink>
@@ -81,8 +87,11 @@ export default function AdminNav() {
                         {({ active }) => (
                           <NavLink
                             to="/profile"
-                            activeClassName={active ? "bg-gray-100" : ""}
-                            className="block px-4 py-2 text-sm text-gray-700"
+                            className={(e) =>
+                              active
+                                ? "block px-4 py-2 text-sm text-gray-700 bg-gray-100"
+                                : "block px-4 py-2 text-sm text-gray-700"
+                            }
                           >
                             Your Profile
                           </NavLink>
@@ -92,8 +101,11 @@ export default function AdminNav() {
                         {({ active }) => (
                           <NavLink
                             to="/settings"
-                            activeClassName={active ? "bg-gray-100" : ""}
-                            className="block px-4 py-2 text-sm text-gray-700"
+                            className={(e) =>
+                              active
+                                ? "block px-4 py-2 text-sm text-gray-700 bg-gray-100"
+                                : "block px-4 py-2 text-sm text-gray-700"
+                            }
                           >
                             Settings
                           </NavLink>
@@ -102,9 +114,12 @@ export default function AdminNav() {
                       <Menu.Item>
                         {({ active }) => (
                           <NavLink
-                            to="/signout"
-                            activeClassName={active ? "bg-gray-100" : ""}
-                            className="block px-4 py-2 text-sm text-gray-700"
+                            onClick={handleLogout}
+                            className={(e) =>
+                              active
+                                ? "block px-4 py-2 text-sm text-gray-700 bg-gray-100"
+                                : "block px-4 py-2 text-sm text-gray-700"
+                            }
                           >
                             Sign out
                           </NavLink>

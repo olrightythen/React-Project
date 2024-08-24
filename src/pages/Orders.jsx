@@ -32,12 +32,20 @@ const Orders = () => {
       {error && <h1>Error: {error}</h1>}
       {!loading && !error && (
         <>
-        <h1 className="text-3xl font-semibold text-center mt-8">Orders</h1>
-        <div className="flex gap-3 flex-wrap px-24 py-12 scroll-smooth justify-center">
-          {orders.map((food) => (
-            <OrderCard key={food.id} fetchOrder={fetchOrders} food={food} />
-          ))}
-        </div>
+          <h1 className="text-4xl text-amber-400 text-center font-bold py-5">
+            Your Orders
+          </h1>
+          <div className="flex gap-3 flex-wrap px-24 py-6 scroll-smooth justify-center">
+            {orders.length === 0 ? (
+              <h1 className="text-3xl text-center font-bold text-gray-300">
+                No orders found
+              </h1>
+            ) : (
+              orders.map((food) => (
+                <OrderCard key={food.id} fetchOrder={fetchOrders} food={food} />
+              ))
+            )}
+          </div>
         </>
       )}
     </div>

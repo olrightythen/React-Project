@@ -1,41 +1,56 @@
 import React from "react";
 import toast from "react-hot-toast";
 
-const FoodCard = ({ food }) => {
+const FoodCard = ({ food: { image, name, tags, price } }) => {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name, tags, price, image }),
+  };
+
   const orderFood = async () => {
     try {
-    const response = await fetch("http://localhost:3000/orders", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(food),
-    });
-    if (!response.ok) {
-      throw new Error("Failed to add food to cart");
-    }
-    console.log(response);
-    toast.success("Order submitted successfully");
+      const response = await fetch(
+        "http://localhost:3000/orders",
+        fetchOptions
+      );
+      if (!response.ok) {
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      }
+      toast.success("Order submitted successfully");
     } catch (error) {
-      console.log(error);
-      toast.error("Failed to submit order");
+      console.error(error);
+      toast.error(`Failed to submit order: ${error.message}`);
     }
   };
 
   return (
-    <div className="shadow-lg w-80 border rounded overflow-hidden">
-      <img src={food.image} alt={food.name} className="h-60 w-full" />
-      <div className="p-4 border-t-4 border-gray">
-        <h2 className="font-semibold mb-2">{food.name}</h2>
-        <p className="text-gray-700 mb-2">Tags: {food.tags.join(', ')}</p>
-        <div className="flex justify-center">
-          <button
-            onClick={orderFood}
-            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 focus:outline-none"
-          >
-            Order Now
-          </button>
+    <div className="relative overflow-hidden bg-gray-800 text-white rounded-lg shadow-lg">
+      <img
+        src={image}
+        alt={name}
+        loading="lazy"
+        className="w-full h-60 md:h-72 lg:h-80 object-cover transition duration-300 filter hover:blur-sm"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-40"></div>
+      <div className="absolute inset-0 flex flex-col justify-between items-center p-4 transition duration-500 backdrop-blur-sm opacity-0 hover:opacity-100">
+        <div className="flex flex-col items-center">
+          <h2 className="text-lg md:text-xl font-semibold mb-2">{name}</h2>
+          <p className="text-sm md:text-base text-gray-200 mb-1">
+            Tags: {tags.join(", ")}
+          </p>
+          <p className="text-base md:text-lg text-neutral-200 font-bold">
+            ${price}
+          </p>
         </div>
+        <button
+          onClick={orderFood}
+          className="px-3 py-1.5 md:px-4 md:py-2 bg-red-600 text-sm md:text-base rounded hover:bg-red-700 focus:outline-none transition duration-300"
+        >
+          Order Now
+        </button>
       </div>
     </div>
   );

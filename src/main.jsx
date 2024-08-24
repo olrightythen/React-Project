@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Contact from "./pages/Contact.jsx";
@@ -16,16 +15,21 @@ import AdminNav from "./admin/AdminNav.jsx";
 import Admin from "./admin/Admin.jsx";
 import Dashboard from "./admin/Dashboard.jsx";
 import AdminLogin from "./admin/AdminLogin.jsx";
+import { Toaster } from "react-hot-toast";
+import EditFood from "./admin/EditFood.jsx";
+import Protected from "./components/Protected.jsx";
+import AddFood from "./admin/AddFood.jsx";
+import Home from "./pages/Home.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <Layout>
-        <App />
+        <Home />
       </Layout>
     ),
-    errorElement: <NotFound />
+    errorElement: <NotFound />,
   },
 
   {
@@ -35,6 +39,11 @@ const router = createBrowserRouter([
         <LoginForm />
       </Layout>
     ),
+  },
+
+  {
+    path: "admin/login",
+    element: <AdminLogin />,
   },
 
   {
@@ -67,45 +76,51 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: (
-      <>
+      <Protected>
         <AdminNav />
         <Admin />
-      </>
+      </Protected>
     ),
     children: [
-      
       {
-        path: "login",
-        element: <AdminLogin />
-        
+        path: "dashboard",
+        element: (
+          <Dashboard totalProducts={10} totalOrders={5} totalUsers={3} />
+        ),
       },
 
       {
-        path: "dashboard",
-        element: <Dashboard totalProducts={10} totalOrders={5} totalUsers={3} />
+        path: "editfood/:id",
+        element: <EditFood />,
+      },
+
+      {
+        path: "addfood",
+        element: <AddFood />,
       },
 
       {
         path: "foods",
-        element: <ManageFoods />
+        element: <ManageFoods />,
       },
-    
+
       {
         path: "orders",
-        element: <ManageOrders />
+        element: <ManageOrders />,
       },
 
       {
         path: "users",
-        element: <ManageUsers />
-      }
+        element: <ManageUsers />,
+      },
     ],
-    errorElement: <NotFound />
-  }
+    errorElement: <NotFound />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Toaster />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

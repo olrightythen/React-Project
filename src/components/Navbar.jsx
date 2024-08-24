@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav
-      className="flex justify-between items-center h-16 backdrop-blur-lg text-gray-200 text-3xl font-bold relative shadow-lg font-mono shadow-orange-500"
+      className="flex justify-between items-center h-16 backdrop-blur-lg text-gray-200 text-3xl font-bold sticky shadow-lg font-mono shadow-orange-500"
       role="navigation"
     >
       <NavLink href="/" className="pl-2">

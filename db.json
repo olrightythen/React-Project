@@ -10,7 +10,7 @@
       "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
       "rating": 4.6,
       "reviewCount": 3,
-      "price": 10.99,
+      "price": "13.99",
       "mealType": [
         "Dinner"
       ]
@@ -405,7 +405,6 @@
     {
       "id": "25",
       "name": "Blueberry Banana Smoothie",
-
       "tags": [
         "Smoothie",
         "Blueberry",
@@ -418,39 +417,6 @@
       "mealType": [
         "Breakfast",
         "Beverage"
-      ]
-    },
-    {
-      "id": "26",
-      "name": "Mexican Street Corn (Elote)",
-      "tags": [
-        "Elote",
-        "Mexican",
-        "Street food"
-      ],
-      "image": "https://cdn.dummyjson.com/recipe-images/26.webp",
-      "rating": 4.6,
-      "reviewCount": 22,
-      "price": 7.99,
-      "mealType": [
-        "Snack",
-        "Side Dish"
-      ]
-    },
-    {
-      "id": "27",
-      "name": "Russian Borscht",
-      "tags": [
-        "Borscht",
-        "Russian",
-        "Soup"
-      ],
-      "image": "https://cdn.dummyjson.com/recipe-images/27.webp",
-      "rating": 4.3,
-      "reviewCount": 49,
-      "price": 8.99,
-      "mealType": [
-        "Dinner"
       ]
     },
     {
@@ -500,13 +466,167 @@
       "mealType": [
         "Beverage"
       ]
+    },
+    {
+      "id": "32",
+      "name": "Vegetarian Stir-Fry",
+      "tags": [
+        "Vegetarian",
+        "Stir-fry",
+        "Asian"
+      ],
+      "image": "https://cdn.dummyjson.com/recipe-images/2.webp",
+      "rating": 4.7,
+      "reviewCount": 36,
+      "price": 8.99,
+      "mealType": [
+        "Lunch"
+      ]
+    },
+    {
+      "id": "9068",
+      "name": "Mo:Mo",
+      "price": 140,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN2uG5sv7i3D7Ks39PseS-IEYxzOyYKNyu6dn71vAxyw&s",
+      "tags": [
+        "momo",
+        "dish"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "cbfb",
+      "name": "Vegetarian Stir-Fry",
+      "tags": [
+        "Vegetarian",
+        "Stir-fry",
+        "Asian"
+      ],
+      "price": 8.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/2.webp"
+    },
+    {
+      "id": "0577",
+      "name": "Classic Margherita Pizza",
+      "tags": [
+        "Pizza",
+        "Italian"
+      ],
+      "price": "12.99",
+      "image": "https://cdn.dummyjson.com/recipe-images/1.webp"
+    },
+    {
+      "id": "8bad",
+      "name": "Mango Salsa Chicken",
+      "tags": [
+        "Chicken",
+        "Salsa"
+      ],
+      "price": 14.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/5.webp"
+    },
+    {
+      "id": "bdb4",
+      "name": "Chicken Biryani",
+      "tags": [
+        "Biryani",
+        "Chicken",
+        "Main course",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "price": 15.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/11.webp"
+    },
+    {
+      "id": "a0b5",
+      "name": "Shrimp Scampi Pasta",
+      "tags": [
+        "Pasta",
+        "Shrimp"
+      ],
+      "price": 13.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/10.webp"
+    },
+    {
+      "id": "2950",
+      "name": "Chapli Kebabs",
+      "tags": [
+        "Kebabs",
+        "Beef",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "price": 13.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/14.webp"
+    },
+    {
+      "id": "bed0",
+      "name": "Chicken Karahi",
+      "tags": [
+        "Chicken",
+        "Karahi",
+        "Main course",
+        "Indian",
+        "Pakistani",
+        "Asian"
+      ],
+      "price": 14.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/12.webp"
+    },
+    {
+      "id": "7b9a",
+      "name": "Turkish Kebabs",
+      "tags": [
+        "Kebabs",
+        "Turkish",
+        "Grilling"
+      ],
+      "price": 13.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/24.webp"
+    },
+    {
+      "id": "c3fb",
+      "name": "Mo:Mo",
+      "tags": [
+        "momo",
+        "dish"
+      ],
+      "price": 140,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN2uG5sv7i3D7Ks39PseS-IEYxzOyYKNyu6dn71vAxyw&s"
+    },
+    {
+      "id": "4e5d",
+      "name": "South Indian Masala Dosa",
+      "tags": [
+        "Dosa",
+        "Indian",
+        "Asian"
+      ],
+      "price": 9.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/28.webp"
+    },
+    {
+      "id": "a904",
+      "name": "Vegetarian Stir-Fry",
+      "tags": [
+        "Vegetarian",
+        "Stir-fry",
+        "Asian"
+      ],
+      "price": 8.99,
+      "image": "https://cdn.dummyjson.com/recipe-images/2.webp"
     }
   ],
   "users": [
     {
       "id": "1",
+      "role": "admin",
       "name": "John Doe",
-      "email": "exampl.com",
+      "email": "example.com",
       "password": "password",
       "phone": "123-456-7890",
       "address": "123 Main St, City, State, 12345",

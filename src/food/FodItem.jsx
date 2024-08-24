@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import FoodCard from "./FoodCard";
 
 const FoodItem = () => {
-  const [foods, setFoods] = React.useState([]);
-  const [loading, setLoading] = React.useState(true);
-  const [error, setError] = React.useState(null);
+  const [foods, setFoods] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const fetchFoods = async () => {
     try {
       const response = await fetch("http://localhost:3000/foods");
@@ -28,12 +28,20 @@ const FoodItem = () => {
   }, []);
   return (
     <div>
-      {loading && <h1 className="text-3xl text-center font-bold">Loading...</h1>}
-      {error && <h1 className="text-3xl text-center font-bold">Error: {error}</h1>}
+      {loading && (
+        <h1 className="text-3xl text-center font-bold text-gray-400">
+          Loading...
+        </h1>
+      )}
+      {error && (
+        <h1 className="text-3xl text-center font-bold text-gray-400">
+          Error: {error}
+        </h1>
+      )}
       {!loading &&
         !error &&
         (foods.length === 0 ? (
-          <h1 className="text-3xl text-center font-bold">
+          <h1 className="text-3xl text-center font-bold text-gray-400">
             No food items available
           </h1>
         ) : (

@@ -31,8 +31,8 @@ const LoginForm = () => {
 
   return (
     <div class="flex flex-col items-center justify-center h-screen">
-      <div class="w-full max-w-md bg-white rounded-lg shadow-md p-6">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">Login</h2>
+      <div class="w-full max-w-md bg-transparent backdrop-blur-sm backdrop-brightness-90 border-slate-500 border-2 rounded-lg shadow-md p-6">
+        <h2 class="text-2xl font-bold text-gray-300 mb-4">Login</h2>
         <form onSubmit={handleSubmit} class="flex flex-col">
           <input
             type="email"
@@ -51,7 +51,7 @@ const LoginForm = () => {
           <div class="flex items-center justify-between flex-wrap">
             <label
               for="remember-me"
-              class="text-sm text-gray-900 cursor-pointer"
+              class="text-sm text-gray-300 cursor-pointer"
             >
               <input type="checkbox" id="remember-me" class="mr-2" />
               Remember me
@@ -59,7 +59,7 @@ const LoginForm = () => {
             <a href="#" class="text-sm text-blue-500 hover:underline mb-0.5">
               Forgot password?
             </a>
-            <p class="text-gray-900 mt-4">
+            <p class="text-gray-300 mt-4">
               {" "}
               Don't have an account?{" "}
               <a

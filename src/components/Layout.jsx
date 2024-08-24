@@ -8,7 +8,6 @@ import background from "../assets/bg.jpg";
 const Layout = ({ children }) => {
   return (
     <div style={{backgroundImage: `url(${background})`}}>
-      <Toaster />
       <Navbar />
       <main>{children}</main>
       <Footer />
